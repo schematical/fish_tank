@@ -1,0 +1,26 @@
+{
+    "name": "fish_tank",
+    "description": "Matt's genetic learning algorithm experiment",
+    "tags": [
+    ],
+    "version": "1.0.0",
+    "author": "Matt Lea<mlea@schematical.com>",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:schematical/fish_tank.git"
+    },
+    "engines": [
+        "node >= 0.8.0"
+    ],
+    "main": "app.js",
+    "dependencies": {
+        "request": "~2.33.0",
+        "underscore": "~1.6.0",
+        "express": "3.x",
+        "hjs": "*",
+        "stylus": "*",
+        "async":"*",
+        "seed-random":"*"
+    }
+
+}
