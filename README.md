@@ -28,6 +28,7 @@ var fish_tank = new lib.FishTank({
 
 ###Outputs:
 Out puts is an object where each property is a function and one of the possible moves it can make. Return `false` if that move is not possible.
+
 ```
 var fish_tank = new lib.FishTank({
     outputs:{
@@ -42,7 +43,7 @@ var fish_tank = new lib.FishTank({
             this.has_moved = true;
             return true;
         },... 
-        ```
+```
         
         
 ###Score:
