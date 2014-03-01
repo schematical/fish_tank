@@ -24,11 +24,12 @@ var fish_tank = new lib.FishTank({
         
     },
     ... 
-  ```
+```
 
 ###Outputs:
 Out puts is an object where each property is a function and one of the possible moves it can make. Return `false` if that move is not possible.
 ```
+var fish_tank = new lib.FishTank({
     outputs:{
         a1:function(){
             if(this.has_moved){
@@ -72,38 +73,20 @@ var fish_tank = new lib.FishTank({
     },...
 ```
 
+###On Tick:
+The `on_tick` function runs once per decision cycle and basically does clean up or updates any display you might have.
 
+
+```
+var fish_tank = new lib.FishTank({
     on_tick:function(next){
         console.log(' --------------------------------  ');
         var move_ct = 0;
-        for(var i in t_board){
-            var line = '';
-            for(var ii in t_board[i]){
-                if(t_board[i][ii]){
-                    move_ct += 1;
-                    line += ' ' +  t_board[i][ii];
-                }else{
-                    line += '       ';
-                }
-
-            }
-            console.log(line);
-        }
-        for(var i in fish_tank.fish_coll){
-            fish_tank.fish_coll[i].has_moved = false;
-           // console.log('Fish: ' + fish_tank.fish_coll[i].id + ' - Score: ' + fish_tank.fish_coll[i].score);
-            if(fish_tank.fish_coll[i].score != 0){
-                console.log("!!!!!!!!!!!!!!!!!!!!!!! - " + fish_tank.fish_coll[i].id + " - WINNER!!!!!!!!!!!!!!!!!!!!!!!");
-                console.log(fish_tank.fish_coll[i].serialize());
-               return next(true);
-            }
-
-        }
-        console.log('Move CT:' + move_ct);
-        if(move_ct >= 9){
-            return next(true);
-        }
+        /*
+            Print out what is going on or update graphics...
+        */
         return next();
-    }
+    },..
+```
 
 });
