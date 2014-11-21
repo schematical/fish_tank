@@ -2,7 +2,7 @@ fish_tank
 =========
 This is the begining of my genetic learning algorithm in Node. I built it at a hackathon for fun but plan to add more to it.
 
-For a quick intro to what I was trying to acomplish check out [This Youtube Video](https://www.youtube.com/watch?v=GvEywP8t12I). 
+For a quick intro to what I was trying to acomplish check out [This Youtube Video](https://www.youtube.com/watch?v=GvEywP8t12I).
 
 I started out with tick tack toe instead. There is still a lot to go. Eventually I have an idea for a fully functional game 2d top view simulation game. Connect with me if you have any interest in building a much larger game.
 
@@ -91,3 +91,6 @@ var fish_tank = new lib.FishTank({
 ```
 
 });
+##Random Note:
+[http://en.wikipedia.org/wiki/Hebbian_theory](http://en.wikipedia.org/wiki/Hebbian_theory)
+[https://www.youtube.com/watch?v=_m97_kL4ox0](https://www.youtube.com/watch?v=_m97_kL4ox0)
