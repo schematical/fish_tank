@@ -166,13 +166,13 @@ var fish_tank = new lib.FishTank({
                     row += 1;
                 }
             }
-            if(row >= 3 || col[i] >= 3){
+            if(row >= 3 || col[ii] >= 3){
                 fish.score += 10;
-                next();
+                return next();
             }
         }
 
-        next();
+		return next();
     },
     /**
      * Gets run once per tick
@@ -195,11 +195,14 @@ var fish_tank = new lib.FishTank({
         }
         for(var i in fish_tank.fish_coll){
             fish_tank.fish_coll[i].has_moved = false;
-           // console.log('Fish: ' + fish_tank.fish_coll[i].id + ' - Score: ' + fish_tank.fish_coll[i].score);
+            console.log('Fish: ' + fish_tank.fish_coll[i].id + ' - Score: ' + fish_tank.fish_coll[i].score);
             if(fish_tank.fish_coll[i].score != 0){
                 console.log("!!!!!!!!!!!!!!!!!!!!!!! - " + fish_tank.fish_coll[i].id + " - WINNER!!!!!!!!!!!!!!!!!!!!!!!");
-                console.log(fish_tank.fish_coll[i].serialize());
-               return next(true);
+				var ranked = fish_tank.rank();
+				//There should only be 2
+				ranked[1].kill();
+				ranked[0].spawnChild();
+               return next(/*true*/);
             }
 
         }
