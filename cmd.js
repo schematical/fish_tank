@@ -178,6 +178,7 @@ var fish_tank = new lib.FishTank({
      * Gets run once per tick
      */
     on_tick:function(next){
+		//TODO: Compaire board. if no move has been made spawnFresh
         console.log(' --------------------------------  ');
         var move_ct = 0;
         for(var i in t_board){
